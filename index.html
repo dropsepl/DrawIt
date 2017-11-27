@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DrawIt</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+   
+    <section id="start-page">
+        <div id="panel">
+            <div id="tools-panel">
+                <ul>
+                    <li>
+                        <div class="tools">
+                            <img onclick="brush()" class="svg-list" src="svg/brush.svg" alt="brush_icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tools">
+                            <img onclick="eraser()" class="svg-list" id="eraser" src="svg/eraser.svg" alt="eraser_icon">
+                        </div>
+                    </li>
+                     <li>
+                        <div class="tools">
+                            <img class="svg-list" src="svg/palette.svg" alt="palette_icon">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tools">
+                            <img onclick="clearCanvas()" class="svg-list" src="svg/trash.svg" alt="bin_icon">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="colors">
+                <div class="color-col-left">
+                    <div class="color" id="black" onclick="chooseColor(this)"></div>
+                    <div class="color" id="grey" onclick="chooseColor(this)"></div>
+                    <div class="color" id="brown" onclick="chooseColor(this)"></div>
+                    <div class="color" id="pink" onclick="chooseColor(this)"></div>
+                    <div class="color" id="darkblue" onclick="chooseColor(this)"></div>
+                </div>
+                <div class="color-col-right">
+                    <div class="color" id="blue" onclick="chooseColor(this)"></div>
+                    <div class="color" id="green" onclick="chooseColor(this)"></div>
+                    <div class="color" id="yellow" onclick="chooseColor(this)"></div>
+                    <div class="color" id="orange" onclick="chooseColor(this)"></div>
+                    <div class="color" id="red" onclick="chooseColor(this)"></div>
+                </div>
+            </div>
+        </div>
+        <div id="drawing-panel">
+            <canvas id="canvas"></canvas>
+        </div>
+    </section>
+    <script src="js/drawit.js"></script>
+</body>
+</html>

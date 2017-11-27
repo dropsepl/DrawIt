@@ -1,0 +1,137 @@
+body, html {
+    cursor: crosshair;
+    height: 100%;
+    margin: 0;
+	padding: 0;
+}
+
+#panel {
+    background: #13171F;
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 75px;
+    z-index: 1000000;
+}
+
+#tools-panel ul {
+    line-height: 45px;
+    list-style: none;
+    padding: 28px 0 0 8px;
+}
+
+#tools-panel ul li {
+    cursor: pointer; 
+    margin: 5px;   
+    opacity: 1.0;
+    transition: opacity .2s ease-in-out;
+}
+
+#tools-panel ul > li:hover {
+    opacity: 1.0;
+}
+
+#tools-panel ul:hover > li:not(:hover) {
+    opacity: 0.6;
+}
+
+#tools-panel ul li:nth-child(3) {
+    display: none;
+}
+
+.svg-list {
+    padding: 6px;
+    width: 34px;
+}
+
+.colors {
+    bottom: 62px;
+    position: absolute;
+}
+
+.color {
+    border-radius: 100px;
+    cursor: pointer;
+    height: 29px;
+    margin: 15px 0 0 22px;
+    width: 29px;
+}
+
+.colors .color-col-left .color:nth-child(1) {
+    background: #2B2B2B;
+}
+
+.colors .color-col-left .color:nth-child(2) {
+    background: #595959;
+}
+
+.colors .color-col-left .color:nth-child(3) {
+    background: #704C31;
+}
+
+.colors .color-col-left .color:nth-child(4) {
+    background: #B500C0;
+}
+
+.colors .color-col-left .color:nth-child(5) {
+    background: #1C25C0;
+}
+
+.colors .color-col-right .color:nth-child(1) {
+    background: #06B7C0;
+}
+
+.colors .color-col-right .color:nth-child(2) {
+    background: #76CF02;
+}
+
+.colors .color-col-right .color:nth-child(3) {
+    background: #DEC402;
+}
+
+.colors .color-col-right .color:nth-child(4) {
+    background: #CD6002;
+}
+
+.colors .color-col-right .color:nth-child(5) {
+    background: #CD0402;
+}
+
+canvas {
+    position: fixed;
+}
+
+@media screen and (max-height: 780px) {
+    
+    .svg-list {
+        width: 31px;
+    }
+    
+   .color-col-right, .color-col-left {
+        float: left;
+    }
+    
+    .colors {
+        left: -2px;
+    }
+    
+    .color {
+        height: 25px;
+        margin: 20px 0 0 10px;
+        width: 25px;
+    }
+    
+}
+
+@media screen and (max-height: 559px) {
+    
+    .colors {
+        display: none;
+    }
+    
+    #tools-panel ul li:nth-child(3) {
+        display: block;
+    }
+}
