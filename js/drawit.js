@@ -34,11 +34,7 @@ function paint(currentX, currentY, clicked) {
     ctx.moveTo(posX, posY);
     ctx.lineTo(currentX, currentY);
     ctx.strokeStyle = color;
-     if(color == "white") {
-        ctx.lineWidth = 13;
-    } else {
-        ctx.lineWidth = 7;
-    }
+    ctx.lineWidth = (color == "white")? 13 : 7;
     ctx.closePath();
     ctx.stroke();
   }
